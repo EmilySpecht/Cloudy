@@ -1,9 +1,8 @@
 import React from 'react';
 
-function App() {
+export default function Main() {
   return (
     <div>Cloudy :)</div>
   )
 }
 
-export default App;
