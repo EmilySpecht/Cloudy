@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles.css'
 
-export default function LoadingDots() {
+export const LoadingDots = () => {
   return (
     <div className='loading'>
       <span></span>
