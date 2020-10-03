@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
 import api from '../../services/api'
 import './styles.css'
@@ -9,7 +9,7 @@ export default function Main() {
   const [weather, setWeather] = useState()
   const [cityCoords, setCityCoords] = useState()
   const [isLoading, setIsLoading] = useState(true)
-  
+
   useEffect(() => {
     const fetchWeather = async (coords) => {
       const response = await api.get('/onecall', {
@@ -29,7 +29,7 @@ export default function Main() {
         const { latitude, longitude } = pos.coords
         const geolocationCoords = { latitude, longitude }
         setCityCoords(geolocationCoords)
-        console.log(`Coords returned with sucess.`)
+        console.log('Coords returned with sucess.')
       })
     }
 
@@ -38,7 +38,6 @@ export default function Main() {
     } else {
       fetchWeather(cityCoords)
     }
-
   }, [cityCoords])
 
   useEffect(() => {
@@ -47,9 +46,9 @@ export default function Main() {
       console.log(weather)
     }
   }, [weather])
-  return ( 
-    <div className='section'>
-      {isLoading ? <LoadingDots /> : <TemperatureCard /> }
+  return (
+    <div className="section">
+      {isLoading ? <LoadingDots /> : <TemperatureCard />}
     </div>
   )
 }
