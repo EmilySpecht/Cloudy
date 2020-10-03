@@ -33,11 +33,7 @@ export default function Main() {
       })
     }
 
-    if (!cityCoords) {
-      getGeolocation()
-    } else {
-      fetchWeather(cityCoords)
-    }
+    !cityCoords ? getGeolocation() : fetchWeather(cityCoords)
   }, [cityCoords])
 
   useEffect(() => {

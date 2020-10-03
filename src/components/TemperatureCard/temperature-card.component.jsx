@@ -1,9 +1,9 @@
 import React from 'react'
 import './temperature-card.css'
 
-export const TemperatureCard = ({ climate }) => {
+export const TemperatureCard = () => {
   let letterColor = ''
-  climate = {
+  const climate = {
     date: '25 de novembro',
     sky: 'cloudy',
     temperature: 25,
@@ -13,13 +13,7 @@ export const TemperatureCard = ({ climate }) => {
     rain: 22
   }
 
-  if (climate.sky === 'sunny') {
-    letterColor = 'letter-sunny'
-  } else if (climate.sky === 'cloudy') {
-    letterColor = 'letter-cloudy'
-  } else if (climate.sky === 'rain') {
-    letterColor = 'letter-rain'
-  }
+  letterColor = `letter-${climate.sky}`
 
   return (
     <div className="temperature-card">
