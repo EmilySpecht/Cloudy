@@ -4,7 +4,7 @@ import './styles.css'
 
 export const LoadingDots = () => {
   return (
-    <div className='loading'>
+    <div className="loading">
       <span></span>
       <span></span>
       <span></span>
